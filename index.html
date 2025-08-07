@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Muhammad Usman Ilyas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="32-favi.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="fas fa-user"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" data-title="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="#about" data-title="About"><i class="fas fa-user-circle"></i></a></li>
+            <li><a href="#projects" data-title="Projects"><i class="fas fa-code"></i></a></li>
+            <li><a href="#skills" data-title="Skills"><i class="fas fa-laptop-code"></i></a></li>
+            <li><a href="#contact" data-title="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-card">
+            <div class="hero-img">
+                <img src="profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="hero-text">
+                <h1>Muhammad Usman Ilyas</h1>
+                <h4 style="font-style: italic;">"Turning coffee into code, one line at a time ☕💻"</h4>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this, 'personal')">
+                <img src="profile.jpg" alt="Profile Photo" />
+                <h3>Muhammad Usman Ilyas</h3>
+                <div class="card-details personal">
+                    <p>✔️Gender: Male</p>
+                    <p>✔️DOB: 02 Sep, 2005</p>
+                    <p>✔️Age: <span id="age"></span></p>
+                    <p>✔️Country: Pakistan</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="icon-circle"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Education</h3>
+                <div class="card-details">
+                    <h4>Matric</h4>
+                    <p>✔️Subjects: Maths, Physics, Chemistry, Biology</p>
+                    <p>✔️Grade: A+ (FBISE)</p>
+                    <h4>Intermediate</h4>
+                    <p>✔️Subjects: Maths, Physics, Chemistry</p>
+                    <p>✔️Grade: A (FBISE)</p>
+                    <h4>Bachelors</h4>
+                    <p>✔️BS Software Engineering</p>
+                    <p>✔️CGPA: 3.96=>(2 Semesters)</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="icon-circle"><i class="fas fa-brain"></i></div>
+                <h3>Currently Learning</h3>
+                <div class="card-details">
+                    <p>✔️Software Engineering </p>
+                    <p>✔️3rd Semester</p>
+                    <p>✔️Frontend Development</p>
+                    <p>✔️AI Agents</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="icon-circle"><i class="fas fa-heart"></i></div>
+                <h3>Interests</h3>
+                <div class="card-details">
+                    <h4>Hobbies</h4>
+                    <p>✔️Cricket</p>
+                    <p>✔️Video Gaming</p>
+                    <p>✔️Coding</p>
+                    <h4>Languages</h4>
+                    <p>✔️English</p>
+                    <p>✔️Punjabi</p>
+                    <p>✔️Urdu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+        <div class="card-container">
+
+            <!-- Project 1 -->
+            <div class="card project-card" onclick="toggleProjectDetails(this)">
+                <div class="icon-circle"><i class="fas fa-tasks"></i></div>
+                <h3><strong>Quiz System (C#)</strong></h3>
+                <div class="card-details">
+                    <p>✅ Built using <strong>C#</strong>, <strong>Windows Forms</strong>, and <strong>Guna UI</strong> for a modern desktop quiz interface</p>
+                    <p>✅ Uses <strong>SQL Server</strong> for secure quiz, user, and result data management</p>
+                    <p>✅ Two roles: <strong>Admin</strong> (manages quizzes) and <strong>Student</strong> (attempts quizzes)</p>
+                    <p>✅ Real-time score calculation and result display after quiz completion</p>
+                    <p>✅ Prevents multiple attempts and tracks student performance</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card project-card" onclick="toggleProjectDetails(this)">
+                <div class="icon-circle"><i class="fas fa-university"></i></div>
+                <h3><strong>ATM Machine Simulation</strong></h3>
+                <div class="card-details">
+                    <p>✅ Developed in <strong>C++</strong> for console-based ATM simulation</p>
+                    <p>✅ Utilizes <strong>file handling</strong> to manage user account data securely</p>
+                    <p>✅ Supports core ATM operations: <strong>balance inquiry, withdrawal, deposit, and PIN change</strong></p>
+                    <p>✅ Enhanced console UI with <strong>Windows color</strong> and <strong>cursor positioning</strong></p>
+                    <p>✅ Includes <strong>login authentication</strong> and input validation for real ATM experience</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card project-card" onclick="toggleProjectDetails(this)">
+                <div class="icon-circle"><i class="fas fa-cloud-sun"></i></div>
+                <h3><strong>Weather Forecast App</strong></h3>
+                <div class="card-details">
+                    <p>✅ Developed using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> for frontend functionality</p>
+                    <p>✅ Integrates a <strong>weather API</strong> to fetch real-time weather data</p>
+                    <p>✅ Users can enter any city name to get live weather updates</p>
+                    <p>✅ Displays temperature, condition, and other info in a clean, responsive UI</p>
+                    <a href="https://usman-ilyas-11.github.io/Weather-Forecast/" target="_blank" style="text-decoration: none;">✅View Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="card project-card" onclick="toggleProjectDetails(this)">
+                <div class="icon-circle"><i class="fas fa-calculator"></i></div>
+                <h3><strong>Calculator</strong></h3>
+                <div class="card-details">
+                    <p>✅ Built using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> for a responsive user interface</p>
+                    <p>✅ Performs basic arithmetic operations: addition, subtraction, multiplication, and division</p>
+                    <p>✅ Utilizes the <code>eval()</code> function for efficient expression evaluation</p>
+                    <p>✅ Includes clean and intuitive button layout for seamless user interaction</p>
+                    <a href="https://usman-ilyas-11.github.io/Calculator/" target="_blank" style="text-decoration: none;">✅View Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="card project-card" onclick="toggleProjectDetails(this)">
+                <div class="icon-circle"><i class="fas fa-hand-rock"></i></div>
+                <h3><strong>Rock Paper Scissors</strong></h3>
+                <div class="card-details">
+                    <p>✅ Developed using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> for a fully interactive game</p>
+                    <p>✅ Implements core logic to determine winner based on player vs computer choices</p>
+                    <p>✅ Features a responsive layout with simple and clean UI design</p>
+                    <p>✅ Provides real-time game result feedback and randomized computer selection</p>
+                    <a href="https://usman-ilyas-11.github.io/Rock-paper-scissors-game/" target="_blank" style="text-decoration: none;">View Live Demo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- === Skills === -->
+    <section id="skills">
+        <h2><i class="fas fa-tools"></i> Skills</h2>
+        <ul>
+            <li>✅ C#</li>
+            <li>✅ HTML, CSS, JavaScript,React</li>
+            <li>✅ Windows Forms</li>
+            <li>✅ Git & GitHub</li>
+            <li>✅ C++</li>
+            <li>✅ Python</li>
+            <li>✅ Word</li>
+            <li>✅ Excel</li>
+            <li>✅ Powerpoint</li>
+            <li>✅ Access</li>
+            <li>✅ Canva</li>
+            <li>✅ SQL</li>
+            <li>✅ VS Code</li>
+            <li>✅ Visual Studio</li>
+            <li>✅ API Basics</li>
+            <li>✅ Problem-Solving</li>
+            <li>✅ Time Management</li>
+            <li>✅ Team Collaboration</li>
+            <li>✅ Communication Skills</li>
+        </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+        <div class="card-container">
+
+            <div class="card">
+                <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                <h2>Email</h2>
+                <a href="mailto:Musmanilyas.002@gmail.com">Musmanilyas.002@gmail.com</a>
+            </div>
+
+            <div class="card">
+                <div class="icon-circle"><i class="fab fa-github"></i></div>
+                <h2>GitHub</h2>
+                <a href="https://github.com/Usman-Ilyas-11" target="_blank">Usman-Ilyas-11</a>
+            </div>
+
+            <div class="card">
+                <div class="icon-circle"><i class="fab fa-linkedin"></i></div>
+                <h2>LinkedIn</h2>
+                <a href="https://www.linkedin.com/in/muhammad-usman-ilyas-24b20b354" target="_blank">M. Usman Ilyas</a>
+            </div>
+
+            <div class="card">
+                <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                <h2>Contact</h2>
+                <a href="tel:+923348829555">Call Me</a>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <p> Muhammad Usman Ilyas. </p>
+        <p>All rights reserved.</p>
+        <p>&copy; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
